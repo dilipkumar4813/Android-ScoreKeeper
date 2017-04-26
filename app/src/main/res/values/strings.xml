@@ -8,4 +8,6 @@
 
     <string name="team_a">TEAM A</string>
     <string name="team_b">TEAM B</string>
+
+    <string name="reset">Reset</string>
 </resources>
