@@ -14,6 +14,9 @@ import utils.iamdilipkumar.com.scorekeeper.data.TeamPreferences;
 
 public class MainActivity extends AppCompatActivity {
 
+    @BindView(R.id.tv_winning_team)
+    TextView mWinningTeam;
+
     @BindView(R.id.tv_team_a)
     TextView mTeamA;
 
@@ -101,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_reset) {
             mTeamAPoints = 0;
             mTeamBPoints = 0;
+            mWinningTeam.setText(getString(R.string.lets_get));
             TeamPreferences.resetPreferences(this);
             mTeamA.setText(getString(R.string.team_a));
             mTeamB.setText(getString(R.string.team_b));
@@ -118,6 +122,14 @@ public class MainActivity extends AppCompatActivity {
         } else {
             String displayPoints = getString(R.string.team_b) + " - " + points;
             mTeamB.setText(displayPoints);
+        }
+
+        if(mTeamAPoints>mTeamBPoints){
+            mWinningTeam.setText(getString(R.string.team_a_winning));
+        }else if(mTeamBPoints>mTeamAPoints){
+            mWinningTeam.setText(getString(R.string.team_b_winning));
+        }else{
+            mWinningTeam.setText(getString(R.string.team_tie));
         }
     }
 }

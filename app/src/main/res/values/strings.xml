@@ -10,4 +10,8 @@
     <string name="team_b">TEAM B</string>
 
     <string name="reset">Reset</string>
+    <string name="team_a_winning">Team A is winning</string>
+    <string name="team_b_winning">Team B is winning</string>
+    <string name="team_tie">Its a Tie</string>
+    <string name="lets_get">Lets get going</string>
 </resources>
