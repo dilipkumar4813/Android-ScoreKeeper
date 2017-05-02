@@ -113,6 +113,12 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Method to update the points of the team
+     *
+     * @param points - Concatenation of previous points
+     * @param team - The team for which the update has to be made
+     */
     private void updateTeamPoints(int points, String team) {
 
         TeamPreferences.addChangePreferences(this, points, team);
